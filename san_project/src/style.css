@@ -1,0 +1,21 @@
+
+html,body{width: 100%;height: 100%;}
+.body{background: #dddddd;background: url(images/icon_01.png)}
+.dev{height: 50%;width: 100%;background: url(images/icon_01.png) no-repeat;}
+.self{font-family: "my"}
+@font-face{
+    font-family: "MyFont";
+    src:  url('./fonts/glyphicons-halflings-regular.woff') format('woff'),
+          url('./fonts/glyphicons-halflings-regular.woff2') format('woff2');
+    font-weight: 500;
+    font-style:normal;
+
+}
+
+@font-face{
+    font-family: "my";
+    src: url("./fonts/glyphicons-halflings-regular.woff") format("woff"),
+        url("./fonts/glyphicons-halflings-regular.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}

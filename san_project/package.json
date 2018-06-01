@@ -1,0 +1,32 @@
+{
+  "name": "san_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gogo": "webpack",
+    "dev": "webpack-dev-server --open --config config/webpack.dev.js",
+    "dev_build": "webpack --config config/webpack.dev.js",
+    "test": "webpack --config config/webpack.test.js",
+    "build": "webpack --config config/webpack.build.js",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "san": "^3.6.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3"
+  }
+}

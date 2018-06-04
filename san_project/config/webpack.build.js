@@ -4,25 +4,17 @@ const cleanwebpackplugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
 	entry: {
-		app:'./src/index.js',
-		print:'./src/print.js'
+		app:'./src/index.js'
 	},
 	output:{
 		filename:'[name].bundle.dev.js',
 		path: path.resolve(__dirname,'dev')
-	},
-	devtool:'inline-source-map',
-	devServer:{
-		contentBase:'./dev',
-		hot:true
 	},
 	plugins:[
 		new cleanwebpackplugin(['dev']),
 		new htmlwebpackplugin({
 			title:'output Managent'
 		}),
-		new webpack.NamedModulesPlugin(),
-+     	new webpack.HotModuleReplacementPlugin()
 	],
 	module: {
 		rules: [
@@ -44,6 +36,10 @@ module.exports = {
 				use:[
 					'file-loader'
 				]
+			},
+			{
+				test:/\.js/,
+				use:['babel-loader']
 			}
 		]
 	}

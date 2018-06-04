@@ -4,8 +4,7 @@ const cleanwebpackplugin = require('clean-webpack-plugin')
 const webpack = require('webpack')
 module.exports = {
 	entry: {
-		app:'./src/index.js',
-		print:'./src/print.js'
+		app:'./src/index.js'
 	},
 	output:{
 		filename:'[name].bundle.dev.js',
@@ -20,9 +19,7 @@ module.exports = {
 		new cleanwebpackplugin(['dev']),
 		new htmlwebpackplugin({
 			title:'IFE san'
-		}),
-		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin()
+		})
 	],
 	module: {
 		rules: [

@@ -27,6 +27,9 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "html-loader": "^0.5.5",
+    "san-loader": "github:ecomfe/san-loader",
+    "san-router": "^1.2.0"
   }
 }

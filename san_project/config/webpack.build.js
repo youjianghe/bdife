@@ -13,7 +13,11 @@ module.exports = {
 	plugins:[
 		new cleanwebpackplugin(['dev']),
 		new htmlwebpackplugin({
-			title:'output Managent'
+			title:'output Managent',
+			inject:'body',
+			template:'src/index.htm',
+			minify:{}
+			
 		}),
 	],
 	module: {

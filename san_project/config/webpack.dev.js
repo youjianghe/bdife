@@ -13,13 +13,18 @@ module.exports = {
 	devtool:'inline-source-map',
 	devServer:{
 		contentBase:'../dev',
-		hot:true
+		hot:true,
+		inline:true
 	},
 	plugins:[
 		new cleanwebpackplugin(['dev']),
 		new htmlwebpackplugin({
-			title:'IFE san'
-		})
+			filename:'index.html',
+			template:'src/index.html',
+			inject:'body',
+			minify:{}
+		}),
+		new webpack.HotModuleReplacementPlugin()
 	],
 	module: {
 		rules: [
@@ -44,10 +49,15 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
+				exclude:/node_modules/,
 				use:[
 					'babel-loader'
 				]
-			  }
+			},
+			{
+				test: /\.san$/,
+				loader: 'san-loader'
+			}
 		]
 	}
 }
